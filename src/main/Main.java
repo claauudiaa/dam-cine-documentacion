@@ -13,6 +13,7 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         int opcion = 0;
         int opcion1 = 0;
+        int opcion2 = 0;
 
         Cine cine1 = new Cine("Artesiete", 200, 5);
         Pelicula pelicula1 = new Pelicula("Frozen", 120);
@@ -50,8 +51,14 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("Trabajando...");
-                   break;
+                    System.out.print("\nPor favor, seleccione el número de sala para reservar: ");
+                    opcion2 = entrada.nextInt();
+                    if (opcion2 <= salas.length) {
+                        salas[opcion2 - 1].reservarButaca();
+                    } else {
+                        System.out.println("Por favor, seleccione una sala del 1 al " + salas.length);
+                    }
+                    break;
                 case 3:
                     System.out.println("Trabajando...");
                     break;
