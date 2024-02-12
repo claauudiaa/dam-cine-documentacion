@@ -73,6 +73,19 @@ public class Sala {
         }
 
     }
+
+    /**
+     * Este método muestra la matriz de las butacas para comprobar los asientos libres.
+     */
+    public void asientosLibres() {
+        System.out.println("\nEstos son los asientos de la sala " + getNumSala() + "\n");
+        for (int i = 0; i < butacas.length; i++) {
+            for (int j = 0; j < butacas[i].length; j++) {
+                System.out.print(butacas[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
     public int getNumSala() {
         return numSala;
     }
